@@ -1,6 +1,11 @@
 name: Step 4 # Setup the Django REST API framework
 
 on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment to deploy'
+        required: false
   push:
     branches:
       - "build-octofit-app"
