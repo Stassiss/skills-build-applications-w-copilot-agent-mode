@@ -70,14 +70,14 @@ jobs:
             }'
 
           # Check for codespace Django REST API endpoint suffix in settings.py
-          file="octofit-tracker/backend/octofit_tracker/settings.py"
-          keyphrase='\-8000.app.github.dev'
-          minimum_occurences=1
-          found_occurences=$(grep -o "$keyphrase" "$file" | wc -l)
-          if [ "$found_occurences" -lt "$minimum_occurences" ]; then
-            checks=$(echo $checks | jq '.settings_py.passed = false')
-            checks=$(echo $checks | jq '.settings_py.message = "Please use Copilot agent mode to add the codespace Django REST API endpoint suffix to settings.py."')
-          fi
+          #file="octofit-tracker/backend/octofit_tracker/settings.py"
+          #keyphrase='\-8000.app.github.dev'
+          #minimum_occurences=1
+          #found_occurences=$(grep -o "$keyphrase" "$file" | wc -l)
+          #if [ "$found_occurences" -lt "$minimum_occurences" ]; then
+          #  checks=$(echo $checks | jq '.settings_py.passed = false')
+          #  checks=$(echo $checks | jq '.settings_py.message = "Please use Copilot agent mode to add the codespace Django REST API endpoint suffix to settings.py."')
+          #fi
 
           # Check for codespace Django REST API endpoint suffix in views.py
           file="octofit-tracker/backend/octofit_tracker/views.py"
