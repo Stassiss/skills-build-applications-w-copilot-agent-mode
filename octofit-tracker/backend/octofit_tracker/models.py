@@ -12,7 +12,7 @@ class User(models.Model):
 class Team(models.Model):
     _id = models.ObjectIdField()
     name = models.CharField(max_length=100)
-    members = models.ArrayField(model_container=User)
+    members = models.ManyToManyField('User', related_name='teams')
     # Add other fields as needed
 
 class Activity(models.Model):

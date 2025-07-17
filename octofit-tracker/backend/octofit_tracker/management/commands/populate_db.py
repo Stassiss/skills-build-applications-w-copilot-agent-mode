@@ -12,8 +12,10 @@ class Command(BaseCommand):
         user3 = User.objects.create(email='carol@example.com', name='Carol', password='carolpass')
 
         # Teams
-        team1 = Team.objects.create(name='Team Alpha', members=[user1, user2])
-        team2 = Team.objects.create(name='Team Beta', members=[user3])
+        team1 = Team.objects.create(name='Team Alpha')
+        team1.members.add(user1, user2)
+        team2 = Team.objects.create(name='Team Beta')
+        team2.members.add(user3)
 
         # Activities
         Activity.objects.create(user=user1, type='run', duration=30, date=timezone.now())
