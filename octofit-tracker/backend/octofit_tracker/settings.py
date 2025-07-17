@@ -52,7 +52,7 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
-# MongoDB database configuration
+# MongoDB database configuration djongo
 DATABASES = {
     'default': {
         'ENGINE': 'djongo',
